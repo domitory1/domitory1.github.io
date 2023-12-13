@@ -48,107 +48,20 @@ $(window).scroll(function(){
 	});
 });
 
-$('body').on('click', '.buttonAddToBasket', function(e){
-	e.stopImmediatePropagation();
-	const buttons = '<button class="buttonRemove">-</button> <input class="quantity" readonly value = 1> <button class="buttonAdd">+</button>';
-	const btnSpace = $(this).parents('.btn-space');
-	btnSpace.html($(buttons));
+const textBlocks = document.querySelectorAll('#text-block');
 
-	let data = {
-		product_id: $(this).attr('data-id'),
-		product_price: $(this).attr('data-price'),
-	};
-	
-	$.ajax({
-		url: '',
-		type: 'post',
-		data: data,
-		success: function(response){
-			tg.MainButton.text = "Корзина " + response.total;
-			
-		},
-		
-		error: function(){
-			tg.showPopup({
-				title: '🤔',
-				message: "Возникла какая-то проблема. Уже работаем над ее решением"
-			  });
+function truncateText() {
+    textBlocks.forEach(textBlock => {
+    	const availableHeight = textBlock.clientHeight;
+    	const originalText = textBlock.innerHTML;
+
+		if (textBlock.scrollHeight > availableHeight) {
+			let truncatedText = originalText;
+			while (textBlock.scrollHeight > availableHeight && truncatedText.length > 0) {
+				truncatedText = truncatedText.slice(0, -1);
+				textBlock.innerHTML = truncatedText + '...';
+			}
 		}
-	});
-	
-});
-
-$('body').on('click', '.buttonRemove', function(e){
-
-	e.stopImmediatePropagation();
-	const btnSpace = $(this).parents('.btn-space');
-	const quantity = btnSpace.find('.quantity').val();
-	value = Number(quantity) - 1;
-	let data = {
-		product_id: $(this).attr('data-id'),
-		product_quantity: value,
-	};
-	
-	$.ajax({
-		url: '',
-		type: 'post',
-		data: data,
-		success: function(response){
-			tg.MainButton.text = "Корзина " + response.total;
-			
-		},
-		
-		error: function(){
-			tg.showPopup({
-				title: '🤔',
-				message: "Возникла какая-то проблема. Уже работаем над ее решением"
-			  });
-		}
-	});
-
-	/*responce of server*/ 
-	if (value == 0){
-		btnSpace.html($('<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>'));
-	} else{
-		btnSpace.find('.quantity').val(value);
-	}
-});
-
-$('body').on('click', '.buttonAdd', function(e){
-
-	e.stopImmediatePropagation();
-	const btnSpace = $(this).parents('.btn-space');
-	const quantity = btnSpace.find('.quantity').val();
-	value = Number(quantity) + 1;
-	let data = {
-		product_id: $(this).attr('data-id'),
-		product_quantity: value,
-	};
-	
-	$.ajax({
-		url: '',
-		type: 'post',
-		data: data,
-		success: function(response){
-			tg.MainButton.text = "Корзина " + response.total;
-			
-		},
-		
-		error: function(){
-			tg.showPopup({
-				title: '🤔',
-				message: "Возникла какая-то проблема. Уже работаем над ее решением"
-			  });
-		}
-	});
-
-	/*responce of server*/ 
-	if (value == 0){
-		btnSpace.html($('<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>'));
-	} else{
-		btnSpace.find('.quantity').val(value);
-	}
-});
-tg.MainButton.onClick(function(){
-	window.location.href = 'https://domitory1.github.io/Basket/basket.html';
-});
+  	});
+}
+truncateText();

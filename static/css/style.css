@@ -8,9 +8,9 @@ body{
 	Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji",
 	"Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-/*::-webkit-scrollbar{
+::-webkit-scrollbar{
 	width: 0;
-}*/
+}
 .header{
 	position: fixed;
 	min-width: 100%;
@@ -58,6 +58,7 @@ body{
 	grid-template-columns: 1fr 1fr;
 }
 .cardProduct{
+	height: 100%;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	border-radius: 10px;
@@ -71,11 +72,12 @@ body{
 	object-fit: cover;
 }
 .cardProduct h3{
-	margin: 0;
+	height: 43px;
 	font-size: 16px;
 	padding: 0px 5px 0px 5px;
 }
 .cardProduct p{
+	height: 74px;
 	font-size: 14px;
 	padding: 0px 5px 0px 5px;
 	color: var(--tg-theme-hint-color);
@@ -86,39 +88,11 @@ body{
 }
 .btn-space button{
 	width: 100%;
-	padding: 8px 0;
+	height: 40px;
 	border-radius: 5px;
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
-}
-.btn-space .buttonRemove{
-	display: inline-block;
-	width: calc(30% - 5px);
-	font-size: 16px;
-	font-weight: bold;
-	color: var(--tg-theme-button-text-color);
-	background: var(--tg-theme-button-color);
-}
-.btn-space .quantity{
-	display: inline-block;
-	width: calc(40%);
-	padding: 8px 0px;
-	text-align: center;
-	font-size: 16px;
-	border: none;
-	border-radius: 5px;
-	color: var(--tg-theme-text-color);
-	background: var(--tg-theme-secondary-bg-color);
-}
-.btn-space .quantity:focus{
-	outline: none;
-}
-.btn-space .buttonAdd{
-	display: inline-block;
-	width: calc(30% - 5px);
-	font-size: 16px;
-	color: var(--tg-theme-button-text-color);
-	background: var(--tg-theme-button-color);
+	border: 1px solid red;
 }
