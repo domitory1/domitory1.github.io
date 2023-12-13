@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Menu</title>
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" href="static/css/flickity.min.css"/>
+	<script src="static/js/telegram-web-app.js"></script>
+	<script src="static/js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="webapp">
+		<div class="header">
+			<div class="slider">
+				<a href="#categoryCell_1" class="categoryName active">🍳 Завтраки</a>
+				<a href="#categoryCell_2" class="categoryName">☕️ Класические напитки</a>
+				<a href="#categoryCell_3" class="categoryName">🍰 Десерты</a>
+				<a href="#categoryCell_4" class="categoryName">🍹 Летнее меню</a>
+				<a href="#categoryCell_5" class="categoryName">🍬 Коробки конфет</a>
+				<a href="#categoryCell_6" class="categoryName">🥐 Выпечка</a>
+				<a href="#categoryCell_7" class="categoryName">🥞 Блинчики</a>
+			</div>
+		</div>
+
+		<div class="container">
+			<h2>🍳 Завтраки</h2>
+			<p class="description_category">
+				ОПИСАНИЕ КАТЕГОРИИ
+			</p>
+			<div id="categoryCell_1" class="categoryElem">
+				<div class="col-6">
+					<div class="cardProduct">
+						<picture><img src="static/img/Завтраки/Вафли сырные.jpeg"></picture>
+						<h3>Вафли сырные</h3>
+						<p>Две вафли с добавлением сыра в тесто, подаются с красной слабосоленой рыбой, зеленым салатом, помидорами черри, мягким творожным сыром, кедровыми орешкамии и соусом бальзамиком.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">430 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_2" class="cardProduct">
+						<picture><img src="static/img/Завтраки/Вафли творожные.jpeg"></picture>
+						<h3>Вафли творожные</h3>
+						<p>Подаются со свежими ягодами и кусочками банана (2 шт.).</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">280 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_3" class="cardProduct">
+						<picture><img src="static/img/Завтраки/Галета на постном тесте.jpeg"></picture>
+						<h3>Галета на постном тесте</h3>
+						<p>Постная галета на цельнозерновой муке.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="3" data-price="660">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/Завтраки/Гранола.jpeg"></picture>
+						<h3>Гранола</h3>
+						<p>Наша домашняя ореховая гранола подается с бананом, топленым с семенами ванили, грушей и свежими ягодами.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/Завтраки/Каша рисовая с соусом манго-маракуя.jpeg"></picture>
+						<h3>Каша рисовая с соусом манго-маракуя</h3>
+						<p>Рисовая каша с бананом, семенами чиа, лепестками миндаля и пюре мано-маракуя.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">180 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/Завтраки/Круассан десертный.jpeg"></picture>
+						<h3>Круассан десертный</h3>
+						<p>Сливочный круассан, сырный крем, кули.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/Завтраки/Сырная вафля с яйцом скрембл и лососем.jpeg"></picture>
+						<h3>Сырная вафля с яйцом скрембл и лососем</h3>
+						<p>Сырная вафля, скрембл, слабосоленый лосось, микс зелени, помидоры черри, сырный крем, бальзамическиий соус.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">430 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/Завтраки/Сырная вафля с яйцом скрембл и ростбифом.jpeg"></picture>
+						<h3>Сырная вафля с яйцом скрембл и ростбифом</h3>
+						<p>Сырная вафля, микс зелени, черри, медово-горчичный соус, бальзамический соус.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">380 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/Завтраки/Сырники.jpeg"></picture>
+						<h3>Сырники</h3>
+						<p>Воздушные сырники. Подаются с россыпью свежих ягод и фирменным соусом.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket"> ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>🍔 Бургеры</h2>
+			<p class="description_category">
+				Мы предлагаем вам самые сочные и аппетитные гамбургеры, которые вы 
+				когда-либо пробовали. Наш секрет - только свежие ингредиенты и мастерство наших 
+				поваров.
+			</p>
+			<div id="categoryCell_2" class="categoryElem">
+				<div class="col-6">
+					<div id="elem_1" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_2" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="2" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_3" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>🥗 Салаты</h2>
+			<p class="description_category">
+				Наши салаты готовятся только перед тем, как они будут поданы на ваш стол
+			</p>
+			<div id="categoryCell_3" class="categoryElem">
+				<div class="col-6">
+					<div id="elem_1" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_2" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_3" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>🍮 Десерты</h2>
+			<p class="description_category">
+				Наша команда кондитеров готова предложить вам разнообразные варианты 
+				десертов, которые подойдут как для легкого перекуса, так и для особенных 
+				праздников.
+			</p>
+			<div id="categoryCell_4" class="categoryElem">
+				<div class="col-6">
+					<div id="elem_1" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_2" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_3" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="elem_4" class="cardProduct">
+						<picture><img src="static/img/img.jpeg"></picture>
+						<h3>Свиные ребра в пивной глазури</h3>
+						<p>Свиные ребра в пивной глазури </p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<script src="static/js/flickity.pkgd.min.js"></script>
+	<script src="static/js/script.js"></script>
+</body>
+</html>
