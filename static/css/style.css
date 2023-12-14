@@ -8,9 +8,9 @@ body{
 	Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji",
 	"Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-::-webkit-scrollbar{
+/*::-webkit-scrollbar{
 	width: 0;
-}
+}*/
 .header{
 	position: fixed;
 	min-width: 100%;
@@ -35,10 +35,10 @@ body{
 	background: var(--tg-theme-bg-color);
 }
 .slider a:first-child{
-	margin: 0 3px 0 0 !important;
+	margin: 0 3px 0 0!important;
 }
 .slider a:last-child{
-	margin: 0 0 0 3px !important;
+	margin: 0 0 0 3px!important;
 }
 .header a.active{
 	color: var(--tg-theme-button-text-color);
@@ -73,6 +73,7 @@ body{
 }
 .cardProduct h3{
 	height: 43px;
+	margin: 0;
 	font-size: 16px;
 	padding: 0px 5px 0px 5px;
 }
@@ -80,10 +81,11 @@ body{
 	height: 74px;
 	font-size: 14px;
 	padding: 0px 5px 0px 5px;
+	margin: 0;
 	color: var(--tg-theme-hint-color);
 }
 .btn-space{
-	margin: 0px 10px 7px 10px;
+	margin: 10px 10px 7px 10px;
 	height: 34px;
 }
 .btn-space button{
@@ -94,5 +96,4 @@ body{
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
-	border: 1px solid red;
 }

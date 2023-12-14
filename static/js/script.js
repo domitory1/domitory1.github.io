@@ -48,7 +48,7 @@ $(window).scroll(function(){
 	});
 });
 
-const textBlocks = document.querySelectorAll('#text-block');
+const textBlocks = document.querySelectorAll('#text-block, #name-block');
 
 function truncateText() {
     textBlocks.forEach(textBlock => {
