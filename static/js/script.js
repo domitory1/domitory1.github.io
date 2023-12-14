@@ -1,8 +1,6 @@
 tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
-tg.MainButton.text = "Корзина";
-tg.MainButton.show();
 
 var slider = new Flickity('.slider',{
 	freeScroll: true,
