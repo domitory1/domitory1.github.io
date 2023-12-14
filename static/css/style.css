@@ -94,6 +94,6 @@ body{
 	border-radius: 5px;
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
-	background: var(--tg-theme-button-color);
+	background: var(--tg-theme-hint-color);
 	border: none;
 }

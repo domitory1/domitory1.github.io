@@ -48,7 +48,7 @@ $(window).scroll(function(){
 	});
 });
 
-const textBlocks = document.querySelectorAll('#text-block, #name-block');
+const textBlocks = document.querySelectorAll('#descriptionProduct, #nameProduct');
 
 function truncateText() {
     textBlocks.forEach(textBlock => {
@@ -65,3 +65,11 @@ function truncateText() {
   	});
 }
 truncateText();
+
+function getData(){
+	var imageURL = document.querySelector('.cardProduct img').getAttribute('src');
+	var nameProduct = document.getElementById('nameProduct').textContent;
+
+	var idCardProduct = this.closest('.cardProduct').id;
+	console.log(idCardProduct);
+}
