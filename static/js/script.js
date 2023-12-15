@@ -86,7 +86,7 @@ function showPopup(element) {
     const description = document.createElement('p');
     description.textContent = descriptionProduct;
 
-    popup.innerHTML = ''; // Очистить содержимое popup перед добавлением новых элементов
+    popup.innerHTML = '';
     popup.appendChild(image);
     popup.appendChild(name);
     popup.appendChild(description);
