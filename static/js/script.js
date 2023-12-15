@@ -68,26 +68,27 @@ truncateText();
 const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
 
-function showPopup() {
-  const cardProduct = document.getElementById("elem_1");
-  const nameProduct = cardProduct.querySelector('#nameProduct').innerText;
-  const descriptionProduct = cardProduct.querySelector('#descriptionProduct').innerText;
-  const srcImageProduct = cardProduct.querySelector('img').getAttribute('src');
+function showPopup(button) {
+	let cardProductId = button.parentElement.parentElement.parentElement.id;
+	const cardProduct = document.getElementById(cardProductId);
+	const nameProduct = cardProduct.querySelector('#nameProduct').innerText;
+	const descriptionProduct = cardProduct.querySelector('#descriptionProduct').innerText;
+	const srcImageProduct = cardProduct.querySelector('img').getAttribute('src');
 
-  const image = document.createElement('img');
-  image.src = srcImageProduct;
+	const image = document.createElement('img');
+	image.src = srcImageProduct;
 
-  const name = document.createElement('h3');
-  name.textContent = nameProduct;
+	const name = document.createElement('h3');
+	name.textContent = nameProduct;
 
-  const description = document.createElement('p');
-  description.textContent = descriptionProduct;
+	const description = document.createElement('p');
+	description.textContent = descriptionProduct;
 
-  popup.appendChild(image);
-  popup.appendChild(name);
-  popup.appendChild(description);
+	popup.appendChild(image);
+	popup.appendChild(name);
+	popup.appendChild(description);
 
-  popupOverlay.style.display = "block";
+	popupOverlay.style.display = "block";
 }
 
 function hidePopup() {
