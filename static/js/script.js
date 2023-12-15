@@ -68,7 +68,6 @@ truncateText();
 const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
 
-
 function showPopup(element) {
 	document.body.classList.add('popup-open');
 
@@ -92,6 +91,7 @@ function showPopup(element) {
     popup.appendChild(name);
     popup.appendChild(description);
 
+	popupOverlay.classList.add('show');
     popupOverlay.style.display = "block";
 }
 
@@ -99,6 +99,8 @@ function hidePopup() {
   while (popup.firstChild) {
     popup.removeChild(popup.firstChild);
   }
+
+  popupOverlay.classList.remove('show');
   popupOverlay.style.display = "none";
   document.body.classList.remove('popup-open');
 }
