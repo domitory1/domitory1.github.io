@@ -80,7 +80,7 @@ function showPopup(){
 	image.src = srcImageProduct;  
 	popup.appendChild(image);
 
-	var name = document.createElement('h2');
+	var name = document.createElement('h3');
 	name.textContent = nameProduct;  
 	popup.appendChild(name);
 
@@ -89,20 +89,39 @@ function showPopup(){
 	popup.appendChild(description);
 
 	document.body.appendChild(popup);
-}
 
-function hidePopup(){
-	var popup = document.getElementById('popup');
-	popup.style.display = 'none';
-}
+	var elementsToBlur = document.querySelectorAll('body > *:not(.popup)');
+	elementsToBlur.forEach(function(element){
+		element.style.filter = 'blur(3px)';
+	});
 
+}
+document.body.addEventListener('click', function(event){
+	
+	var popup = document.querySelector('.popup');
+	
+	if (popup && !popup.contains(event.target)){
+		
+		popup.remove();
+
+		var elementsToBlur = document.querySelectorAll('body > *:not(.popup)');
+		elementsToBlur.forEach(function(element){
+			element.style.filter = 'none';
+		});
+	}
+});
 /*
-truncateText();
+document.body.addEventListener('click', function(event){
+	console.log('event есть')
+	var popup = document.querySelector('.popup');
+	
+	if (popup && !popup.contains(event.target)){
+		console.log('if выполняется')
+		popup.remove;
 
-function getData(){
-	var imageURL = document.querySelector('.cardProduct img').getAttribute('src');
-	var nameProduct = document.getElementById('nameProduct').textContent;
-
-	var idCardProduct = this.closest('.cardProduct').id;
-	console.log(idCardProduct);
-}*/
+		var elementsToBlur = document.querySelectorAll('body > *:not(.popup)');
+		elementsToBlur.forEach(function(element){
+			element.style.filter = 'none';
+		});
+	}
+});*/

@@ -8,9 +8,9 @@ body{
 	Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji",
 	"Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-/*::-webkit-scrollbar{
+::-webkit-scrollbar{
 	width: 0;
-}*/
+}
 .header{
 	position: fixed;
 	min-width: 100%;
@@ -94,7 +94,7 @@ body{
 	border-radius: 5px;
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
-	background: var(--tg-theme-hint-color);
+	background: var(--tg-theme-button-color);
 	border: none;
 }
 .popup{
@@ -102,29 +102,27 @@ body{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	max-width: 90%;
-	max-height: 90%;
+	width: 70%;
+	height: 80%;
 	border-radius: 8px;
 	background-color: white;
-	border: 1px solid #ccc;
 	z-index: 9999;
 	overflow: hidden;
 }
 .popup img{
 	width: 100%;
-	height: 150px;
+	height: 200px;
 	object-fit: cover;
 }
-.popup h2{
+.popup h3{
 	height: 43px;
 	margin: 0;
-	font-size: 16px;
-	padding: 0px 5px 0px 5px;
+	font-size: 18px;
+	padding: 0px 15px 0px 15px;
 }
 .popup p{
 	height: 74px;
-	font-size: 14px;
-	padding: 0px 5px 0px 5px;
+	padding: 0px 15px 0px 15px;
 	margin: 0;
 	margin-bottom: 20px;
 	color: var(--tg-theme-hint-color);
