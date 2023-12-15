@@ -112,7 +112,6 @@ body.popup-open {
 #popup-overlay {
 	display: none;
     position: fixed;
-	opacity: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -121,9 +120,6 @@ body.popup-open {
     backdrop-filter: blur(4px);
 	transition: opacity 0.3s ease-in-out;
     z-index: 1;
-}
-#popup-overlay.show{
-	opacity: 1;
 }
 #popup {
 	position: absolute;
