@@ -2,7 +2,7 @@ tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
 
-var slider = new Flickity('.sliderCategory',{
+var slider_1 = new Flickity('.sliderCategory',{
 	freeScroll: true,
 	contain: true,
 	cellAlign: 'center',
@@ -11,7 +11,7 @@ var slider = new Flickity('.sliderCategory',{
 	pageDots: false,
 });
 var slider = new Flickity('.sliderSale',{
-	autoPlay: true,
+	autoPlay: 2500,
 	wrapAround: true,
 	fade: true,
 	cellAlign: 'right',
@@ -43,12 +43,12 @@ $('body').on('click', '[href*="#"]', function(e){
 $(window).scroll(function(){
 	$('.categoryElem').each(function(i) {
 		if(getActiveICatalogNav('#'+$(this).attr('id'))) {
-			if(slider.selectedIndex != i) {
+			if(slider_1.selectedIndex != i) {
 				let current = $(this).attr('id');
-				$('.slider a').each(function() {
+				$('.slider_1 a').each(function() {
 					$(this).removeClass('active');
 				})
-				$('.slider a[href="#'+current+'"]').addClass('active');
+				$('.slider_1 a[href="#'+current+'"]').addClass('active');
 				slider.select(i);
 			}
 		}
