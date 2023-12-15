@@ -65,63 +65,37 @@ function truncateText() {
 
 truncateText();
 
-function showPopup(){
-	var popup = document.getElementById('popup');
+const popupOverlay = document.getElementById("popup-overlay");
+const popup = document.getElementById("popup");
 
-	var cardProduct = document.querySelector('.cardProduct');
-	var nameProduct = cardProduct.querySelector('#nameProduct').innerText;
-	var descriptionProduct = cardProduct.querySelector('#descriptionProduct').innerText;
-	var srcImageProduct = cardProduct.querySelector('img').getAttribute('src');
+function showPopup() {
+  const cardProduct = document.getElementById("elem_1");
+  const nameProduct = cardProduct.querySelector('#nameProduct').innerText;
+  const descriptionProduct = cardProduct.querySelector('#descriptionProduct').innerText;
+  const srcImageProduct = cardProduct.querySelector('img').getAttribute('src');
 
-	var popup = document.createElement('div');  
-	popup.classList.add('popup');
+  const image = document.createElement('img');
+  image.src = srcImageProduct;
 
-	var image = document.createElement('img');
-	image.src = srcImageProduct;  
-	popup.appendChild(image);
+  const name = document.createElement('h3');
+  name.textContent = nameProduct;
 
-	var name = document.createElement('h3');
-	name.textContent = nameProduct;  
-	popup.appendChild(name);
+  const description = document.createElement('p');
+  description.textContent = descriptionProduct;
 
-	var description = document.createElement('p');
-	description.textContent = descriptionProduct;  
-	popup.appendChild(description);
+  popup.appendChild(image);
+  popup.appendChild(name);
+  popup.appendChild(description);
 
-	document.body.appendChild(popup);
-
-	var elementsToBlur = document.querySelectorAll('body > *:not(.popup)');
-	elementsToBlur.forEach(function(element){
-		element.style.filter = 'blur(3px)';
-	});
-
+  popupOverlay.style.display = "block";
 }
-document.body.addEventListener('click', function(event){
-	
-	var popup = document.querySelector('.popup');
-	
-	if (popup && !popup.contains(event.target)){
-		
-		popup.remove();
 
-		var elementsToBlur = document.querySelectorAll('body > *:not(.popup)');
-		elementsToBlur.forEach(function(element){
-			element.style.filter = 'none';
-		});
-	}
-});
-/*
-document.body.addEventListener('click', function(event){
-	console.log('event есть')
-	var popup = document.querySelector('.popup');
-	
-	if (popup && !popup.contains(event.target)){
-		console.log('if выполняется')
-		popup.remove;
+function hidePopup() {
+  while (popup.firstChild) {
+    popup.removeChild(popup.firstChild);
+  }
+  popupOverlay.style.display = "none";
+}
 
-		var elementsToBlur = document.querySelectorAll('body > *:not(.popup)');
-		elementsToBlur.forEach(function(element){
-			element.style.filter = 'none';
-		});
-	}
-});*/
+popupOverlay.addEventListener("click", hidePopup);
+popup.addEventListener("click", (event) => event.stopPropagation());
