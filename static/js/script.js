@@ -71,11 +71,9 @@ const popup = document.getElementById("popup");
 function showPopup(element) {
 	document.body.classList.add('popup-open');
 
-    let cardProductId = element.closest('.cardProduct').id;
-    const cardProduct = document.getElementById(cardProductId);
-    const nameProduct = cardProduct.querySelector('#nameProduct').innerText;
-    const descriptionProduct = cardProduct.querySelector('#descriptionProduct').innerText;
-    const srcImageProduct = cardProduct.querySelector('img').getAttribute('src');
+    const nameProduct = element.querySelector('h3').innerText;
+    const descriptionProduct = element.querySelector('p').innerText;
+    const srcImageProduct = element.querySelector('img').getAttribute('src');
 
     const image = document.createElement('img');
     image.src = srcImageProduct;
@@ -91,8 +89,8 @@ function showPopup(element) {
     popup.appendChild(name);
     popup.appendChild(description);
 
-	popupOverlay.classList.add('show');
-    popupOverlay.style.display = "block";
+    popupOverlay.classList.add('show');
+	popupOverlay.style.display = "block";
 }
 
 function hidePopup() {
