@@ -11,7 +11,7 @@ var sliderCategory = new Flickity('.sliderCategory',{
 	pageDots: false,
 });
 var sliderSale = new Flickity('.sliderSale',{
-	autoPlay: 2500,
+	/*autoPlay: 5000,*/
 	wrapAround: true,
 	fade: true,
 	cellAlign: 'right',
