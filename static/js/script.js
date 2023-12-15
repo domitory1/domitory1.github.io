@@ -69,6 +69,8 @@ const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
 
 function showPopup(button) {
+	document.body.classList.add('popup-open');
+
 	let cardProductId = button.parentElement.parentElement.parentElement.id;
 	const cardProduct = document.getElementById(cardProductId);
 	const nameProduct = cardProduct.querySelector('#nameProduct').innerText;
@@ -96,7 +98,9 @@ function hidePopup() {
     popup.removeChild(popup.firstChild);
   }
   popupOverlay.style.display = "none";
+  document.body.classList.remove('popup-open');
 }
 
 popupOverlay.addEventListener("click", hidePopup);
+popup.addEventListener("click", hidePopup);
 popup.addEventListener("click", (event) => event.stopPropagation());
