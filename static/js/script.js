@@ -2,13 +2,22 @@ tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
 
-var slider = new Flickity('.slider',{
+var slider = new Flickity('.sliderCategory',{
 	freeScroll: true,
 	contain: true,
 	cellAlign: 'center',
 	dragThreshold: 10,
 	prevNextButtons: false,
 	pageDots: false,
+});
+var slider = new Flickity('.sliderSale',{
+	autoPlay: true,
+	wrapAround: true,
+	fade: true,
+	cellAlign: 'right',
+	cellAlign: 'center',
+	dragThreshold: 10,
+	prevNextButtons: false,
 });
 
 function getActiveICatalogNav(target) {
