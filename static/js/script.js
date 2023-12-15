@@ -49,7 +49,7 @@ $(window).scroll(function(){
 					$(this).removeClass('active');
 				})
 				$('.sliderCategory a[href="#'+current+'"]').addClass('active');
-				slider.select(i);
+				sliderCategory.select(i);
 			}
 		}
 	});
