@@ -12,7 +12,7 @@ var sliderCategory = new Flickity('.sliderCategory',{
 });
 
 var sliderSale = new Flickity('.sliderSale',{
-	autoPlay: true,
+	autoPlay: 5000,
 	wrapAround: true,
 	fade: true,
 	cellAlign: 'center',
