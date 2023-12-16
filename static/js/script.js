@@ -10,14 +10,28 @@ var sliderCategory = new Flickity('.sliderCategory',{
 	prevNextButtons: false,
 	pageDots: false,
 });
+
 var sliderSale = new Flickity('.sliderSale',{
-	/*autoPlay: 5000,*/
 	wrapAround: true,
 	fade: true,
-	cellAlign: 'right',
 	cellAlign: 'center',
 	dragThreshold: 10,
 	prevNextButtons: false,
+});
+
+
+sliderSale.on('change', function() {
+	var currentSlide = sliderSale.selectedElement;
+	if (currentSlide.querySelector('video')) {
+		var video = currentSlide.querySelector('video');
+		sliderSale.stopPlayer();
+		video.play();
+	  	video.addEventListener('ended',function(){
+			console.log('play');
+			video.play();
+			sliderSale.playPlayer();
+		},false);
+	}
 });
 
 function getActiveICatalogNav(target) {
@@ -115,3 +129,39 @@ function hidePopup() {
 popupOverlay.addEventListener("click", hidePopup);
 popup.addEventListener("click", hidePopup);
 popup.addEventListener("click", (event) => event.stopPropagation());
+
+/*
+// запуск видео
+(function(){
+	const target = document.querySelector('.sliderSale');
+	const video = target.querySelector('video');
+
+	const flickity = new Flickity(target,{
+		autoPlay: false,
+	  	wrapAround: true,
+		fade: true,
+		cellAlign: 'center',
+		dragThreshold: 10,
+		prevNextButtons: false,
+		
+	  	on: {
+			ready: function() {
+		  	console.log('Flickity ready');
+		  	video.play();
+			}
+	  	}
+	});
+	flickity.on('change', function(index) {
+		const currentSlide = flickity.selectedCell.element;
+		const currentVideo = currentSlide.querySelector('video');
+		console.log(currentSlide, currentVideo);
+		if (currentVideo) {
+			currentVideo.play();
+		}
+	});
+	
+	video.addEventListener('ended',function(){
+		console.log('ended');
+	  	flickity.next(true);
+	},false);
+})();*/
