@@ -134,7 +134,7 @@ body.popup-open {
 	width: 70%;
 	transform: translate(-50%, -50%);
 	overflow: hidden;
-	background-color: rgba(var(--tg-theme-bg-color), 0.04);
+	background-color: var(--tg-theme-bg-color);
 	/*background-color: rgba(139, 139, 139, 0.24);*/
 	border-radius: 8px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
