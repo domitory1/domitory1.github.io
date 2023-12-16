@@ -9,6 +9,7 @@ const originalDescriptions = Array.from(descriptions).map(description => descrip
 const originalNames = Array.from(names).map(name => name.textContent);
 
 // Функция для отображения всплывающего окна
+
 function showPopup(element) {
     document.body.classList.add('popup-open');
 
@@ -29,8 +30,11 @@ function showPopup(element) {
     popup.appendChild(name);
     popup.appendChild(description);
 
-    popupOverlay.classList.add('show');
-    popupOverlay.style.display = "block";
+    var popupOverlay = document.getElementById('popup-overlay');
+    popupOverlay.classList.add('active');
+
+    //popupOverlay.classList.add('show');
+    //popupOverlay.style.display = "block";
 }
 
 // Функция для обрезания текста
@@ -67,8 +71,11 @@ function hidePopup() {
         popup.removeChild(popup.firstChild);
     }
 
-    popupOverlay.classList.remove('show');
-    popupOverlay.style.display = "none";
+    var popupOverlay = document.getElementById('popup-overlay');
+    popupOverlay.classList.remove('active');
+
+    //popupOverlay.classList.remove('show');
+    //popupOverlay.style.display = "none";
     document.body.classList.remove('popup-open');
 }
 

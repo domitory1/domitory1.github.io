@@ -1,8 +1,11 @@
 body.popup-open {
     overflow: hidden;
 }
+
 #popup-overlay {
-	display: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s easy, visibility 0.5s easy;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,9 +13,24 @@ body.popup-open {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
-	transition: opacity 0.3s ease-in-out;
     z-index: 1;
 }
+#popup-overlay.overlay.active{
+	opacity: 1;
+	visibility: visible;
+}
+
+#popup-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#popup.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 #popup {
 	position: absolute;
 	top: 50%;
