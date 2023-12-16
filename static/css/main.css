@@ -30,7 +30,7 @@ body{
 	line-height: 34px;
 	margin: 0 3px;
 	padding: 0 16px;
-	transition: all ease 0.15s;
+	transition: all ease 0.17s;
 	white-space: nowrap;
 	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
