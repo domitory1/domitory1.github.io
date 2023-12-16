@@ -55,43 +55,30 @@ $(window).scroll(function(){
 	});
 });
 
-const textBlocks = document.querySelectorAll('#descriptionProduct, #nameProduct');
-
-function truncateText() {
-    textBlocks.forEach(textBlock => {
-    	const availableHeight = textBlock.clientHeight;
-    	const originalText = textBlock.innerHTML;
-
-		if (textBlock.scrollHeight > availableHeight) {
-			let truncatedText = originalText;
-			while (textBlock.scrollHeight > availableHeight && truncatedText.length > 0) {
-				truncatedText = truncatedText.slice(0, -1);
-				textBlock.innerHTML = truncatedText + '...';
-			}
-		}
-  	});
-}
-
-truncateText();
-
+const descriptions = document.querySelectorAll('#descriptionProduct');
+const names = document.querySelectorAll('#nameProduct');
 const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
+const originalDescriptions = Array.from(descriptions).map(description => description.textContent);
+const originalNames = Array.from(names).map(name => name.textContent);
+
 
 function showPopup(element) {
-	document.body.classList.add('popup-open');
+    document.body.classList.add('popup-open');
 
-    const nameProduct = element.querySelector('h3').innerText;
-    const descriptionProduct = element.querySelector('p').innerText;
+    var idElement = parseInt(element.id.replace(/\D/g, ''));
     const srcImageProduct = element.querySelector('img').getAttribute('src');
 
     const image = document.createElement('img');
     image.src = srcImageProduct;
 
     const name = document.createElement('h3');
-    name.textContent = nameProduct;
+	console.log(originalNames[0]);
+    name.textContent = originalNames[idElement - 1]; // Полный текст
 
     const description = document.createElement('p');
-    description.textContent = descriptionProduct;
+	console.log(originalDescriptions[0]);
+    description.textContent = originalDescriptions[idElement - 1]; // Полный текст
 
     popup.innerHTML = '';
     popup.appendChild(image);
@@ -99,17 +86,44 @@ function showPopup(element) {
     popup.appendChild(description);
 
     popupOverlay.classList.add('show');
-	popupOverlay.style.display = "block";
+    popupOverlay.style.display = "block";
 }
 
-function hidePopup() {
-  while (popup.firstChild) {
-    popup.removeChild(popup.firstChild);
-  }
+function truncateText(elements) {
+    elements.forEach(element => {
+        const availableHeight = element.clientHeight;
+        const originalText = element.textContent; // Используем textContent вместо innerHTML
+  
+        if (element.scrollHeight > availableHeight) {
+            let truncatedText = originalText;
+            while (element.scrollHeight > availableHeight && truncatedText.length > 0) {
+                truncatedText = truncatedText.slice(0, -1);
+                element.textContent = truncatedText + '...'; // Используем textContent вместо innerHTML
+            }
+        }
+    });
+}
 
-  popupOverlay.classList.remove('show');
-  popupOverlay.style.display = "none";
-  document.body.classList.remove('popup-open');
+// Добавляем обработчики событий для карточек
+const cards = document.querySelectorAll('.cardProduct');
+cards.forEach(card => {
+    card.addEventListener('click', function() {
+        showPopup(this);
+    });
+});
+
+// Вызываем функцию обрезания текста для карточек
+truncateText(descriptions);
+truncateText(names);
+
+function hidePopup() {
+	while (popup.firstChild) {
+    	popup.removeChild(popup.firstChild);
+  	}
+
+  	popupOverlay.classList.remove('show');
+  	popupOverlay.style.display = "none";
+    document.body.classList.remove('popup-open');
 }
 
 popupOverlay.addEventListener("click", hidePopup);

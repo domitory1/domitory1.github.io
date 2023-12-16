@@ -135,7 +135,6 @@ body.popup-open {
 	transform: translate(-50%, -50%);
 	overflow: hidden;
 	background-color: var(--tg-theme-bg-color);
-	/*background-color: rgba(139, 139, 139, 0.24);*/
 	border-radius: 8px;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	z-index: 2;
@@ -146,14 +145,12 @@ body.popup-open {
 	object-fit: cover;
 }
 #popup h3{
-	height: 43px;
-	margin: 0;
+	margin-top: 0px;
 	font-size: 18px;
 	padding: 0px 15px 0px 15px;
 	color: var(--tg-theme-text-color);
 }
 #popup p{
-	height: 74px;
 	padding: 0px 15px 0px 15px;
 	margin: 0;
 	margin-bottom: 20px;
