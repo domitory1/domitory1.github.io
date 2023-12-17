@@ -1,6 +1,4 @@
 // Получаем элементы по селекторам
-const descriptions = document.querySelectorAll('#descriptionProduct');
-const names = document.querySelectorAll('#nameProduct');
 const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
 
@@ -20,10 +18,10 @@ function showPopup(element) {
     image.src = srcImageProduct;
 
     const name = document.createElement('h3');
-    name.textContent = originalNames[idElement - 1];
+    name.textContent = originalNames[idElement];
 
     const description = document.createElement('p');
-    description.textContent = originalDescriptions[idElement - 1];
+    description.textContent = originalDescriptions[idElement];
 
     popup.innerHTML = '';
     popup.appendChild(image);
@@ -32,25 +30,6 @@ function showPopup(element) {
 
     var popupOverlay = document.getElementById('popup-overlay');
     popupOverlay.classList.add('active');
-
-    //popupOverlay.classList.add('show');
-    //popupOverlay.style.display = "block";
-}
-
-// Функция для обрезания текста
-function truncateText(elements) {
-    elements.forEach(element => {
-        const availableHeight = element.clientHeight;
-        const originalText = element.textContent;
-
-        if (element.scrollHeight > availableHeight) {
-            let truncatedText = originalText;
-            while (element.scrollHeight > availableHeight && truncatedText.length > 0) {
-                truncatedText = truncatedText.slice(0, -1);
-                element.textContent = truncatedText + '...';
-            }
-        }
-    });
 }
 
 // Добавляем обработчики событий для карточек
@@ -61,10 +40,6 @@ cards.forEach(card => {
     });
 });
 
-// Вызываем функцию обрезания текста для карточек
-truncateText(descriptions);
-truncateText(names);
-
 // Функция для скрытия всплывающего окна
 function hidePopup() {
     while (popup.firstChild) {
@@ -74,8 +49,6 @@ function hidePopup() {
     var popupOverlay = document.getElementById('popup-overlay');
     popupOverlay.classList.remove('active');
 
-    //popupOverlay.classList.remove('show');
-    //popupOverlay.style.display = "none";
     document.body.classList.remove('popup-open');
 }
 
