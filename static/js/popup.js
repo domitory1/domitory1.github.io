@@ -2,10 +2,6 @@
 const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
 
-// Создаем массивы из текстовых содержимых элементов
-const originalDescriptions = Array.from(descriptions).map(description => description.textContent);
-const originalNames = Array.from(names).map(name => name.textContent);
-
 // Функция для отображения всплывающего окна
 
 function showPopup(element) {

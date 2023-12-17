@@ -82,6 +82,10 @@ function truncateText(elements) {
 const descriptions = document.querySelectorAll('#descriptionProduct');
 const names = document.querySelectorAll('#nameProduct');
 
+// Создаем массивы из текстовых содержимых элементов
+const originalDescriptions = Array.from(descriptions).map(description => description.textContent);
+const originalNames = Array.from(names).map(name => name.textContent);
+
 // Вызываем функцию обрезания текста для карточек
 truncateText(descriptions);
 truncateText(names);
