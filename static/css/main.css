@@ -16,11 +16,15 @@ body{
 	min-width: 100%;
 	top: 0;
 	left: 0;
+	backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
 	z-index: 1;
 }
 .sliderCategory{
 	padding: 10px;
 	background-color: var(--tg-theme-bg-color);
+	backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
 	border-bottom: 1px solid var(--tg-theme-hint-color);
 }
 .sliderCategory a{

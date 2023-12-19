@@ -20,9 +20,9 @@ inline_menu = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
 async def command_start_handler(message: Message) -> None:
     await message.answer("Добрый день! 😊")
     time.sleep(1)
-    await message.answer("Здесь вы можете ознакомитсья с меню Десертрума")
+    await message.answer("Здесь вы можете ознакомитьсья с меню Десертрума")
     time.sleep(2)
-    await message.answer("Нажмите на кнопку, которая расположена под этим сообщением", reply_markup=inline_menu)
+    await message.answer("Нажмите на кнопку, которая расположена под этим сообщением, чтобы увидеть меню", reply_markup=inline_menu)
 
 async def main() -> None:
     bot = Bot(API_TOKEN, parse_mode=ParseMode.HTML)
