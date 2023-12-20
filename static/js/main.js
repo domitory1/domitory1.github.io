@@ -16,7 +16,7 @@ const sliderCategory = new Flickity('.sliderCategory', {
 
 // Инициализация слайдера для распродажи
 const sliderSale = new Flickity('.sliderSale', {
-    autoPlay: 5000,
+    autoPlay: 7000,
     wrapAround: true,
     fade: true,
     cellAlign: 'center',
