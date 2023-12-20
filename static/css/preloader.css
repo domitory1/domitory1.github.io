@@ -1,24 +1,3 @@
-body {
-    background: #121212;
-}
-.images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 32px;
-    gap: 32px;
-    padding: 32px;
-}
-.images__image {
-    border-radius: 8px;
-    overflow: hidden;
-}
-.images__image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    display: block;
-}
 .preloader {
     position: fixed;
     top: 0;
@@ -33,7 +12,7 @@ body {
     justify-content: center;
     opacity: 1;
     visibility: visible;
-    background: rgba(18,18,18,0.64);
+    background-color: var(--tg-theme-bg-color);
     transition: opacity 1s, visibility 0s 0s;
 }
 .preloader_hidden {
