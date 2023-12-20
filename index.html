@@ -6,11 +6,24 @@
 	<title>QR-меню</title>
 	<link rel="stylesheet" href="static/css/main.css">
 	<link rel="stylesheet" href="static/css/popup.css">
+	<link rel="stylesheet" href="static/css/preloader.css">
 	<link rel="stylesheet" href="static/css/flickity.min.css"/>
 	<script src="static/js/telegram-web-app.js"></script>
 	<script src="static/js/jquery.min.js"></script>
 </head>
 <body>
+
+	<div class="preloader">
+		<div class="sk-chase">
+		  <div class="sk-chase-dot"></div>
+		  <div class="sk-chase-dot"></div>
+		  <div class="sk-chase-dot"></div>
+		  <div class="sk-chase-dot"></div>
+		  <div class="sk-chase-dot"></div>
+		  <div class="sk-chase-dot"></div>
+		</div>
+	  </div>
+
 	<div id="webapp">
 		<div class="header">
 			<div class="sliderCategory">
@@ -30,7 +43,7 @@
 			<img src="static/img/Блинчики/Блинчики с томленой грушей.jpeg" alt="Изображение 2">
 		</div>
 		<div class="container">
-			<!--popup-->
+	
 			<div id="popup-overlay" class="overlay"><div id="popup"></div></div>
 
 			<h2 style="margin-top: 25px;">🍳 Завтраки</h2>
@@ -749,10 +762,10 @@
 			</div>
 		</div>
 	</div>
-	
 
-	<script src="static/js/flickity.pkgd.min.js"></script>
 	<script src="static/js/main.js"></script>
 	<script src="static/js/popup.js"></script>
+	<script src="static/js/preloader.js"></script>
+	<script src="static/js/flickity.pkgd.min.js"></script>
 </body>
 </html>
