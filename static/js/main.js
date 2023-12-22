@@ -76,7 +76,5 @@ const names = document.querySelectorAll('#nameProduct');
 const originalDescriptions = Array.from(descriptions).map(description => description.textContent);
 const originalNames = Array.from(names).map(name => name.textContent);
 
-console.log(originalDescriptions);
-
 truncateText(descriptions);
 truncateText(names);
