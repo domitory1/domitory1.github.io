@@ -1,10 +1,8 @@
-// Инициализация Telegram WebApp
 const tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
 tg.ready();
 
-// Инициализация слайдера для категорий
 const sliderCategory = new Flickity('.sliderCategory', {
     freeScroll: true,
     contain: true,
@@ -14,7 +12,6 @@ const sliderCategory = new Flickity('.sliderCategory', {
     pageDots: false,
 });
 
-// Инициализация слайдера для распродажи
 const sliderSale = new Flickity('.sliderSale', {
     autoPlay: 7000,
     wrapAround: true,
@@ -24,7 +21,6 @@ const sliderSale = new Flickity('.sliderSale', {
     prevNextButtons: false,
 });
 
-// Функция для определения активного элемента в навигации
 function getActiveICatalogNav(target) {
     let w = $(window);
     let t = $(target);
@@ -39,14 +35,12 @@ function getActiveICatalogNav(target) {
     }
 }
 
-// Обработчик клика по ссылкам
 $('body').on('click', '[href*="#"]', function(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - 100 }, 200);
 });
 
-// Обработчик прокрутки страницы
 $(window).scroll(function() {
     $('.categoryElem').each(function(i) {
         if (getActiveICatalogNav('#' + $(this).attr('id'))) {
@@ -62,7 +56,6 @@ $(window).scroll(function() {
     });
 });
 
-// Функция для обрезания текста
 function truncateText(elements) {
     elements.forEach(element => {
         const availableHeight = element.clientHeight;
@@ -78,14 +71,12 @@ function truncateText(elements) {
     });
 }
 
-// Получаем элементы по селекторам (! используются в popup.js)
 const descriptions = document.querySelectorAll('#descriptionProduct');
 const names = document.querySelectorAll('#nameProduct');
-
-// Создаем массивы из текстовых содержимых элементов
 const originalDescriptions = Array.from(descriptions).map(description => description.textContent);
 const originalNames = Array.from(names).map(name => name.textContent);
 
-// Вызываем функцию обрезания текста для карточек
+console.log(originalDescriptions);
+
 truncateText(descriptions);
 truncateText(names);
