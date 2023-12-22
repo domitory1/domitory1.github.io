@@ -12,7 +12,7 @@
     justify-content: center;
     opacity: 1;
     visibility: visible;
-    background-color: var(--tg-theme-bg-color);
+    background-color: rgb(255, 255, 255);
     transition: opacity 1s, visibility 0s 0s;
 }
 .preloader_hidden {
