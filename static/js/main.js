@@ -78,3 +78,4 @@ const originalNames = Array.from(names).map(name => name.textContent);
 
 truncateText(descriptions);
 truncateText(names);
+window.addEventListener("orientationchange", truncateText(descriptions), truncateText(names));
