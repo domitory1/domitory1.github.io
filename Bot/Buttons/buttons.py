@@ -8,3 +8,8 @@ application_number_phone = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[
 inline_menu = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
    [InlineKeyboardButton(text="Меню", web_app=WebAppInfo(url='https://domitory1.github.io/index.html'))]
 ])
+
+markup = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[
+   [KeyboardButton(text='Кнопка 1')],
+   [KeyboardButton(text='Кнопка 2')]
+])
