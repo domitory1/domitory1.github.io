@@ -1,0 +1,29 @@
+.buttonRemove{
+    width: calc(35% - 10px);
+    height: 100%;
+    padding: 0;
+    margin-right: 10px;
+	border: none;
+	border-radius: 5px;
+	color: var(--tg-theme-button-text-color);
+	background: var(--tg-theme-button-color);
+}
+.quantity{
+    width: calc(30% - 10px);
+    height: 100%;
+    padding: 0;
+    text-align: center;
+	border: none;
+	border-radius: 5px;
+	background: var(--tg-theme-bg-color);
+}
+.buttonAdd{
+    width: calc(35% - 10px);
+    height: 100%;
+    padding: 0;
+    margin-left: 10px;
+	border: none;
+	border-radius: 5px;
+	color: var(--tg-theme-button-text-color);
+	background: var(--tg-theme-button-color);
+}

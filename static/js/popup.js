@@ -3,7 +3,6 @@ const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
 
 // Функция для отображения всплывающего окна
-
 function showPopup(element) {
     document.body.classList.add('popup-open');
 
@@ -28,11 +27,11 @@ function showPopup(element) {
     popupOverlay.classList.add('active');
 }
 
-// Добавляем обработчики событий для карточек
-const cards = document.querySelectorAll('.cardProduct');
-cards.forEach(card => {
-    card.addEventListener('click', function() {
-        showPopup(this);
+document.querySelectorAll('.cardProduct').forEach(item => {
+    item.addEventListener('click', function(event) {
+      if (!event.target.closest('.btnEnable')) {
+            showPopup(this);
+        }
     });
 });
 
@@ -44,7 +43,6 @@ function hidePopup() {
 
     var popupOverlay = document.getElementById('popup-overlay');
     popupOverlay.classList.remove('active');
-
     document.body.classList.remove('popup-open');
 }
 
