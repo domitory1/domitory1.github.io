@@ -74,9 +74,9 @@ body{
 	grid-template-columns: 1fr 1fr;
 }
 .cardProduct{
-	height: 95%;
+	height: 100%;
 	margin-right: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	border-radius: 10px;
 	overflow: hidden;
 	background: var(--tg-theme-bg-color);
@@ -100,16 +100,7 @@ body{
 	color: var(--tg-theme-hint-color);
 }
 .btn-space{
-	margin: 10px 10px 7px 10px;
-	height: 34px;
-	text-align: center;
-}
-.btn-space .buttonAddToBasket{
-	width: 100%;
+	padding: 10px 0 0 10px;
 	height: 40px;
-	border-radius: 5px;
-	font-size: 14px;
-	color: var(--tg-theme-button-text-color);
-	background: var(--tg-theme-button-color);
-	border: none;
+	text-align: center;
 }

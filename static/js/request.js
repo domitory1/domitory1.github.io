@@ -12,7 +12,7 @@ $('.buttonAddToBasket').click(function(e) {
    const buttons = '<button class="buttonRemove">-</button> <input class="quantity" readonly value = 1> <button class="buttonAdd">+</button>';
    const btnSpace = $(this).parents('.btn-space');
    btnSpace.html($(buttons));
-
+/*
    $.ajax({
       type: 'POST',
       url: '#',
@@ -22,7 +22,7 @@ $('.buttonAddToBasket').click(function(e) {
          
       },
       error: function(xhr, status, error) {
-         // Обработка ошибки
+         
       }
-   });
+   });*/
  });

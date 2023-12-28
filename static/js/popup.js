@@ -1,30 +1,33 @@
-// Получаем элементы по селекторам
 const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
 
-// Функция для отображения всплывающего окна
 function showPopup(element) {
     document.body.classList.add('popup-open');
 
-    const idElement = parseInt(element.id.replace(/\D/g, ''));
+    const idProduct = parseInt(element.id.replace(/\D/g, ''));
     const srcImageProduct = element.querySelector('img').getAttribute('src');
+    const priceProduct = element.querySelector('.buttonAddToBasket').textContent.replace(/\D/g, '');
 
     const image = document.createElement('img');
     image.src = srcImageProduct;
-
     const name = document.createElement('h3');
-    name.textContent = originalNames[idElement];
-
+    name.textContent = originalNames[idProduct];
     const description = document.createElement('p');
-    description.textContent = originalDescriptions[idElement];
+    description.textContent = originalDescriptions[idProduct];
+
+    const btnSpace = document.createElement('div');
+    btnSpace.classList.add('btnSpace')
+    const button = document.createElement('button');
+    button.classList.add('buttonAddToBasket');
+    button.innerHTML = priceProduct;
 
     popup.innerHTML = '';
     popup.appendChild(image);
     popup.appendChild(name);
     popup.appendChild(description);
-
-    var popupOverlay = document.getElementById('popup-overlay');
     popupOverlay.classList.add('active');
+    btnSpace.appendChild(button);
+    popupOverlay.appendChild(btnSpace);
 }
 
 document.querySelectorAll('.cardProduct').forEach(item => {
@@ -35,7 +38,6 @@ document.querySelectorAll('.cardProduct').forEach(item => {
     });
 });
 
-// Функция для скрытия всплывающего окна
 function hidePopup() {
     while (popup.firstChild) {
         popup.removeChild(popup.firstChild);
@@ -46,7 +48,6 @@ function hidePopup() {
     document.body.classList.remove('popup-open');
 }
 
-// Добавляем обработчики событий для скрытия всплывающего окна
 popupOverlay.addEventListener("click", hidePopup);
 popup.addEventListener("click", hidePopup);
 popup.addEventListener("click", (event) => event.stopPropagation());

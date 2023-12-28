@@ -9,7 +9,7 @@ from aiogram.filters import CommandStart, Command
 from aiogram.types import Message
 
 import Buttons.buttons as buttons
-import Queries.queries as queries
+import Requests.requests as requests
 
 
 API_TOKEN = "6658531652:AAEn5TRw5p4yHulphWYttyNfr2bQecvDNvU"
@@ -21,7 +21,7 @@ message_texts_start = ["Добрый день! 😊", "Перед тем, как
 
 @dp.message(CommandStart())
 async def start_command(message: Message):
-   if queries.check_user_id_in_db(message.from_user.id):
+   if requests.check_user_id_in_db(message.from_user.id):
       await message.answer("Выберите раздел", reply_markup=buttons.inline_menu)
    else:
       for text in message_texts_start:
@@ -32,16 +32,16 @@ async def start_command(message: Message):
 
 @dp.message(F.content_type == types.ContentType.CONTACT)
 async def handler_contant(message: Message):
-   if queries.insert_user_id_in_db(message.contact.user_id, message.contact.phone_number) == 'insert_in_db':
+   if requests.insert_user_id_in_db(message.contact.user_id, message.contact.phone_number) == 'insert_in_db':
       await message.answer("Спасибо! Ваш номер телефона сохранен", reply_markup=types.ReplyKeyboardRemove())
       await message.answer("Выберите раздел", reply_markup=buttons.inline_menu)
 
 @dp.message(Command('/', 'command_admin_login'))
 async def admin_login(message: Message):
-   if queries.check_admin_in_db(message.from_user.id):
+   if requests.check_admin_in_db(message.from_user.id):
       await message.answer("Активирован режим Администратор", reply_markup=buttons.markup)
    else:
-      if queries.insert_admin_in_db(message.from_user.id) == 'insert_in_db':
+      if requests.insert_admin_in_db(message.from_user.id) == 'insert_in_db':
          await message.answer("Вы активировали режим Администратор", reply_markup=buttons.markup_admin_keyboard)
 
 async def main() -> None:
