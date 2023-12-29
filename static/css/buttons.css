@@ -25,8 +25,8 @@
     margin-right: 10px;
 	border-radius: 5px;
 	font-size: 14px;
-	color: var(--tg-theme-button-text-color);
-	background: var(--tg-theme-secondary-dg-color);
+	color: var(--tg-theme-text-color);
+	background: var(--tg-theme-button-color);
 	border: none;
 }
 .quantity{
@@ -37,6 +37,7 @@
 	border: none;
 	border-radius: 5px;
 	font-size: 14px;
+	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
 }
 .quantity:focus{
