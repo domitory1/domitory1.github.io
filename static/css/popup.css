@@ -41,14 +41,15 @@ body.popup-open {
 }
 #popup-overlay .popup h3{
 	margin-top: 0px;
+	height: auto;
 	font-size: 20px;
-	padding: 0px 15px 0px 15px;
+	padding: 0px 5px 0px 5px;
 	color: var(--tg-theme-text-color);
 }
 #popup-overlay .popup p{
-	padding: 0px 15px 0px 15px;
-	margin: 0;
+	padding: 0px 5px 0px 5px;
+	margin: 0 0 10px 0;
+	height: auto;
 	font-size: 18px;
-	margin-bottom: 20px;
 	color: var(--tg-theme-hint-color);
 }

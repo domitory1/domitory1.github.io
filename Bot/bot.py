@@ -32,7 +32,7 @@ async def start_command(message: Message):
 
 @dp.message(F.content_type == types.ContentType.CONTACT)
 async def handler_contant(message: Message):
-   if requests.insert_user_id_in_db(message.contact.user_id, message.contact.phone_number) == 'insert_in_db':
+   if requests.insert_user_id_in_db(message.contact.user_id, message.contact.phone_number):
       await message.answer("Спасибо! Ваш номер телефона сохранен", reply_markup=types.ReplyKeyboardRemove())
       await message.answer("Выберите раздел", reply_markup=buttons.inline_menu)
 
@@ -41,8 +41,10 @@ async def admin_login(message: Message):
    if requests.check_admin_in_db(message.from_user.id):
       await message.answer("Активирован режим Администратор", reply_markup=buttons.markup)
    else:
-      if requests.insert_admin_in_db(message.from_user.id) == 'insert_in_db':
+      if requests.insert_admin_in_db(message.from_user.id):
          await message.answer("Вы активировали режим Администратор", reply_markup=buttons.markup_admin_keyboard)
+      else:
+         await message.answer("Превычено количество Администраторов")
 
 async def main() -> None:
    await dp.start_polling(bot)

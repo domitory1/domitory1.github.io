@@ -23,7 +23,7 @@ def insert_user_id_in_db(user_id, phone_number):
    try:
       cursor.execute(f'INSERT INTO пользователи (`Телеграм ID пользователя`, `Номер телефона`) VALUES ({user_id}, {phone_number})')
       conn.commit()
-      return 'insert_in_db'
+      return True
    finally:
       cursor.close()
       conn.close()
@@ -44,10 +44,14 @@ def check_admin_in_db(user_id):
 def insert_admin_in_db(user_id):
    conn = connect_to_db()
    cursor = conn.cursor(buffered=True)
-   try:
-      cursor.execute(f'INSERT INTO администраторы (`Телеграм ID пользователя`, `Номер телефона`) SELECT `Телеграм ID пользователя`, `Номер телефона` FROM пользователи WHERE `Телеграм ID пользователя` = {user_id}')
-      conn.commit()
-      return 'insert_in_db'
-   finally:
-      cursor.close()
-      conn.close()
+   cursor.execute('SELECT COUNT(*) FROM администраторы')
+   if (cursor.fetchone()[0] <= 2):
+      try:
+         cursor.execute(f'INSERT INTO администраторы (`Телеграм ID пользователя`, `Номер телефона`) SELECT `Телеграм ID пользователя`, `Номер телефона` FROM пользователи WHERE `Телеграм ID пользователя` = {user_id}')
+         conn.commit()
+         return True
+      finally:
+         cursor.close()
+         conn.close()
+   else:
+      return False
