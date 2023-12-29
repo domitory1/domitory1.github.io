@@ -28,7 +28,7 @@ function showPopup(element) {
 
 document.querySelectorAll('.cardProduct').forEach(item => {
     item.addEventListener('click', function(event) {
-      if (!event.target.closest('.btnEnable')) {
+        if (!event.target.closest('.btnEnable')) {
             showPopup(this);
         }
     });
@@ -42,7 +42,7 @@ function hidePopup() {
         btnSpace.removeChild(btnSpace.firstChild);
     }
 
-    var popupOverlay = document.getElementById('popup-overlay');
+   var popupOverlay = document.getElementById('popup-overlay');
     popupOverlay.classList.remove('active');
     document.body.classList.remove('popup-open');
 }

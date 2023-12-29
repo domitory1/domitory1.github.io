@@ -15,16 +15,19 @@
 	background: var(--tg-theme-button-color);
 	border: none;
 }
+.btnSpace .buttonAddToBasket{
+	font-size: 18px;
+}
 .buttonRemove{
     width: calc(35% - 10px);
     height: 100%;
     padding: 0;
     margin-right: 10px;
-	border: none;
 	border-radius: 5px;
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
-	background: var(--tg-theme-button-color);
+	background: var(--tg-theme-secondary-dg-color);
+	border: none;
 }
 .quantity{
     width: calc(30% - 10px);
@@ -49,4 +52,13 @@
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
+}
+.btnSpace .buttonRemove{
+    font-size: 18px;
+}
+.btnSpace .quantity{
+    font-size: 18px;
+}
+.btnSpace .buttonAdd{
+    font-size: 18px;
 }
