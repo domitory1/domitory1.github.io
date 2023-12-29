@@ -15,8 +15,8 @@
 	background: var(--tg-theme-button-color);
 	border: none;
 }
-.btnSpace .buttonAddToBasket{
-	font-size: 18px;
+#popup-overlay .btn-space .buttonAddToBasket{
+	font-size: 22px;
 }
 .buttonRemove{
     width: calc(35% - 10px);
@@ -54,12 +54,12 @@
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 }
-.btnSpace .buttonRemove{
-    font-size: 18px;
+.btn-space .buttonRemove{
+    font-size: 22px;
 }
-.btnSpace .quantity{
-    font-size: 18px;
+.btn-space .quantity{
+    font-size: 22px;
 }
-.btnSpace .buttonAdd{
-    font-size: 18px;
+.btn-space .buttonAdd{
+    font-size: 22px;
 }
