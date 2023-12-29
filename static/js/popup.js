@@ -1,12 +1,13 @@
 const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.getElementById("popup");
+const btnSpace = document.querySelector(".btnSpace");
 
 function showPopup(element) {
     document.body.classList.add('popup-open');
 
     const idProduct = parseInt(element.id.replace(/\D/g, ''));
     const srcImageProduct = element.querySelector('img').getAttribute('src');
-    const priceProduct = element.querySelector('.buttonAddToBasket').textContent.replace(/\D/g, '');
+    const contentBtnSpace = element.querySelector('.btn-space').innerHTML;
 
     const image = document.createElement('img');
     image.src = srcImageProduct;
@@ -14,20 +15,15 @@ function showPopup(element) {
     name.textContent = originalNames[idProduct];
     const description = document.createElement('p');
     description.textContent = originalDescriptions[idProduct];
-
-    const btnSpace = document.createElement('div');
-    btnSpace.classList.add('btnSpace')
-    const button = document.createElement('button');
-    button.classList.add('buttonAddToBasket');
-    button.innerHTML = priceProduct;
-
-    popup.innerHTML = '';
+    
     popup.appendChild(image);
     popup.appendChild(name);
     popup.appendChild(description);
-    popupOverlay.classList.add('active');
-    btnSpace.appendChild(button);
+
+    btnSpace.innerHTML = contentBtnSpace;
     popupOverlay.appendChild(btnSpace);
+
+    popupOverlay.classList.add('active');
 }
 
 document.querySelectorAll('.cardProduct').forEach(item => {
@@ -41,6 +37,9 @@ document.querySelectorAll('.cardProduct').forEach(item => {
 function hidePopup() {
     while (popup.firstChild) {
         popup.removeChild(popup.firstChild);
+    }
+    while (btnSpace.firstChild) {
+        btnSpace.removeChild(btnSpace.firstChild);
     }
 
     var popupOverlay = document.getElementById('popup-overlay');
