@@ -25,7 +25,7 @@
     margin-right: 10px;
 	border-radius: 5px;
 	font-size: 14px;
-	color: var(--tg-theme-text-color);
+	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
 }
