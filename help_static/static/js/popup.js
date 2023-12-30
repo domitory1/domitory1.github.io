@@ -1,5 +1,6 @@
 const popupOverlay = document.getElementById("popup-overlay");
 const popup = document.querySelector(".popup");
+const hammer = new Hammer(popup);
 /*const btnSpace = document.querySelector(".btn-space");*/
 
 const showPopup = (element) => {
@@ -15,7 +16,6 @@ const showPopup = (element) => {
     name.textContent = originalNames[idProduct];
     const description = document.createElement('p');
     description.textContent = originalDescriptions[idProduct];
-    console.log(description);
 
     popup.innerHTML = '';
     popup.appendChild(image);
@@ -43,7 +43,8 @@ const hidePopup = () => {
     document.body.classList.remove('popup-open');
 };
 
-popupOverlay.addEventListener("click", hidePopup);
-
-popup.addEventListener("click", hidePopup);
+/*popupOverlay.addEventListener("click", hidePopup);*/
+hammer.on('swipe', function(event) {
+    hidePopup(event);
+  });
 popup.addEventListener("click", (event) => event.stopPropagation());
