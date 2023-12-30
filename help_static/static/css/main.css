@@ -94,6 +94,7 @@ body{
 }
 .cardProduct p{
 	/*height: 74px;*/
+	height: 0;
 	font-size: 14px;
 	padding: 0px 5px 0px 5px;
 	margin: 0;
