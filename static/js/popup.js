@@ -27,6 +27,13 @@ const showPopup = (element) => {
     popupOverlay.classList.add('active');
 };
 
+const hidePopup = () => {
+    popup.innerHTML = '';
+    btnSpace.innerHTML = '';
+    popupOverlay.classList.remove('active');
+    document.body.classList.remove('popup-open');
+};
+
 document.querySelectorAll('.cardProduct').forEach(item => {
     item.addEventListener('click', (event) => {
         if (!event.target.closest('.btnEnable') && document.body.classList != "popup-open") {
@@ -34,13 +41,6 @@ document.querySelectorAll('.cardProduct').forEach(item => {
         }
     });
 });
-
-const hidePopup = () => {
-    popup.innerHTML = '';
-    btnSpace.innerHTML = '';
-    popupOverlay.classList.remove('active');
-    document.body.classList.remove('popup-open');
-};
 
 popupOverlay.addEventListener("click", (event) => {
     if (!event.target.closest('.btn-space')) {

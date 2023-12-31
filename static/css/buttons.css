@@ -54,12 +54,12 @@
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 }
-.btn-space .buttonRemove{
+#popup-overlay .btn-space .buttonRemove{
     font-size: 22px;
 }
-.btn-space .quantity{
+#popup-overlay .btn-space .quantity{
     font-size: 22px;
 }
-.btn-space .buttonAdd{
+#popup-overlay .btn-space .buttonAdd{
     font-size: 22px;
 }
