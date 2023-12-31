@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="help_static/static/css/main.css">
-	<link rel="stylesheet" href="help_static/static/css/buttons.css">
-	<link rel="stylesheet" href="help_static/static/css/popup.css">
-	<link rel="stylesheet" href="help_static/static/css/preloader.css">
-	<link rel="stylesheet" href="help_static/static/libraries/flickity.min.css">
-	<script src="help_static/static/libraries/telegram-web-app.js"></script>
-	<script src="help_static/static/libraries/jquery.min.js"></script>
+    <link rel="stylesheet" href="barter/static/css/main.css">
+	<link rel="stylesheet" href="barter/static/libraries/flickity.min.css">
+	<script src="barter/static/libraries/telegram-web-app.js"></script>
+	<script src="barter/static/libraries/jquery.min.js"></script>
     <title>Коктели</title>
 </head>
 <body>
-
+    <!--Прелоадер-->
     <div class="preloader">
 		<div class="sk-chase">
 		  <div class="sk-chase-dot"></div>
@@ -27,26 +24,29 @@
 
     <div id="webapp">
         <div class="sliderSale">
-            <img src="help_static/static/img/Слайдер/photo_1_2023-12-30_15-37-34.jpg">
-            <img src="help_static/static/img/Слайдер/photo_2_2023-12-30_15-37-34.jpg">
-            <img src="help_static/static/img/Слайдер/photo_3_2023-12-30_15-37-34.jpg">
-            <img src="help_static/static/img/Слайдер/photo_4_2023-12-30_15-37-34.jpg">
-            <img src="help_static/static/img/Слайдер/photo_5_2023-12-30_15-37-34.jpg">
-            <img src="help_static/static/img/Слайдер/photo_6_2023-12-30_15-37-34.jpg">
+            <img src="barter/static/img/Слайдер/photo_1_2023-12-30_15-37-34.jpg">
+            <img src="barter/static/img/Слайдер/photo_2_2023-12-30_15-37-34.jpg">
+            <img src="barter/static/img/Слайдер/photo_3_2023-12-30_15-37-34.jpg">
+            <img src="barter/static/img/Слайдер/photo_4_2023-12-30_15-37-34.jpg">
+            <img src="barter/static/img/Слайдер/photo_5_2023-12-30_15-37-34.jpg">
+            <img src="barter/static/img/Слайдер/photo_6_2023-12-30_15-37-34.jpg">
         </div>
         <div class="container">
+            <!--Popup-->
             <div id="popup-overlay" class="overlay">
                 <div class="cardProduct popup"></div>
             </div>
+
             <h2>Вкусы</h2>
             <div id="categoryCell_1" class="categoryElem">
                 <div class="col-6">
                     <div class="cardProduct" id="0">
-                        <picture><img src="help_static/static/img/Коктели/кровавая мери.jpg" alt="изображение" loading="lazy"></picture>
+                        <picture><img src="barter/static/img/Коктели/кровавая мери.jpg"></picture>
                         <h3 id='nameProduct'>Кровавая мери</h3>
                         <p id="descriptionProduct">1. закинь куб в бокал 
                             2. добавь 50&nbsp;мл водки и 120&nbsp;мл томатного сока 
-                            3. укрась коктейль лимоном </p>
+                            3. укрась коктейль лимоном 
+                        </p>
                         <div class="btnEnable">
                             <div class="btn-space">
                                 <button class="buttonAddToBasket">Рецепт</button>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="col-6">
                     <div class="cardProduct" id="1">
-                        <picture><img src="help_static/static/img/Коктели/мохито.jpg" alt="изображение" loading="lazy"></picture>
+                        <picture><img src="barter/static/img/Коктели/мохито.jpg"></picture>
                         <h3 id='nameProduct'>Мохито</h3>
                         <p id='descriptionProduct'>1. закинь куб в бокал 
                             2. залей 50&nbsp;мл белого рома и 100&nbsp;мл содовой 
@@ -70,7 +70,7 @@
                 </div>
                 <div class="col-6">
                     <div class="cardProduct" id="2">
-                        <picture><img src="help_static/static/img/Коктели/маргарита.jpg" alt="изображение" loading="lazy"></picture>
+                        <picture><img src="barter/static/img/Коктели/маргарита.jpg"></picture>
                         <h3 id='nameProduct'>Маргарита</h3>
                         <p id='descriptionProduct'>1. закинь куб в бокал 
                             2. добавь 50&nbsp;мл текилы 
@@ -84,7 +84,7 @@
                 </div>
                 <div class="col-6">
                     <div class="cardProduct" id="3">
-                        <picture><img src="help_static/static/img/Коктели/голубая лагуна.jpg" alt="изображение" loading="lazy"></picture>
+                        <picture><img src="barter/static/img/Коктели/голубая лагуна.jpg"></picture>
                         <h3 id='nameProduct'>Голубая лагуна</h3>
                         <p id='descriptionProduct'>1. закинь куб в бокал 
                             2. добавь 50&nbsp;мл водки и 100&nbsp;мл спрайта 
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-6">
                     <div class="cardProduct" id="4">
-                        <picture><img src="help_static/static/img/Коктели/пина колада.jpg" alt="изображение" loading="lazy"></picture>
+                        <picture><img src="barter/static/img/Коктели/пина колада.jpg"></picture>
                         <h3 id='nameProduct'>Пина колада</h3>
                         <p id='descriptionProduct'>1. закинь куб в бокал 
                             2. добавь 50&nbsp;мл светлого рома и 50&nbsp;мл ананасового сока 
@@ -112,7 +112,7 @@
                 </div>
                 <div class="col-6">
                     <div class="cardProduct" id="6">
-                        <picture><img src="help_static/static/img/Коктели/санрайз.jpg" alt="изображение" loading="lazy"></picture>
+                        <picture><img src="barter/static/img/Коктели/санрайз.jpg"></picture>
                         <h3 id='nameProduct'>Санрайз</h3>
                         <p id='descriptionProduct'>1. закинь куб в бокал 
                             2. добавь 50&nbsp;мл водки и 100&nbsp;мл апельсинового сока 
@@ -126,7 +126,7 @@
                 </div>
                 <div class="col-6">
                     <div class="cardProduct" id="6">
-                        <picture><img src="help_static/static/img/Коктели/космополитен.jpg" alt="изображение" loading="lazy"></picture>
+                        <picture><img src="barter/static/img/Коктели/космополитен.jpg"></picture>
                         <h3 id='nameProduct'>Космополитен</h3>
                         <p id='descriptionProduct'>1. закинь куб в бокал 
                             2. добавь 40&nbsp;мл водки и 50&nbsp;мл клюквенного сока 
@@ -141,9 +141,7 @@
             </div>
         </div>
     </div>
-    <script src="help_static/static/libraries/flickity.pkgd.min.js"></script>
-	<script src="help_static/static/js/main.js"></script>
-	<script src="help_static/static/js/popup.js"></script>
-	<script src="help_static/static/js/preloader.js"></script>
+    <script src="barter/static/libraries/flickity.pkgd.min.js"></script>
+	<script src="barter/static/js/main.js"></script>
 </body>
 </html>
