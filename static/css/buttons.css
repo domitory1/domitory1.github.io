@@ -6,16 +6,22 @@
 	width: 55%;
 	height: 50px;
 }
+.cardProduct .btn-space{
+	padding: 10px 0 10px 0;
+	height: 40px;
+	text-align: center;
+}
 .buttonAddToBasket{
 	width: 100%;
 	height: 100%;
-	border-radius: 5px;
+	border-radius: 10px;
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
+	background: rgb(170, 0, 255);
 }
-#popup-overlay .btn-space .buttonAddToBasket{
+#popup-overlay .buttonAddToBasket{
 	font-size: 22px;
 }
 .buttonRemove{
@@ -28,6 +34,7 @@
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
+	background: rgb(170, 0, 255);
 }
 .quantity{
     width: calc(30% - 10px);
@@ -53,13 +60,14 @@
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
+	background: rgb(170, 0, 255);
 }
-#popup-overlay .btn-space .buttonRemove{
+#popup-overlay .buttonRemove{
     font-size: 22px;
 }
-#popup-overlay .btn-space .quantity{
+#popup-overlay .quantity{
     font-size: 22px;
 }
-#popup-overlay .btn-space .buttonAdd{
+#popup-overlay .buttonAdd{
     font-size: 22px;
 }

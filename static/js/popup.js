@@ -16,7 +16,6 @@ const showPopup = (element) => {
     const description = document.createElement('p');
     description.textContent = originalDescriptions[idProduct];
     
-    popup.innerHTML = '';
     popup.appendChild(image);
     popup.appendChild(name);
     popup.appendChild(description);
