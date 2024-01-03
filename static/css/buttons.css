@@ -19,7 +19,6 @@
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
-	background: rgb(170, 0, 255);
 }
 #popup-overlay .buttonAddToBasket{
 	font-size: 22px;
@@ -34,7 +33,6 @@
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
-	background: rgb(170, 0, 255);
 }
 .quantity{
     width: calc(30% - 10px);
@@ -60,7 +58,6 @@
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
-	background: rgb(170, 0, 255);
 }
 #popup-overlay .buttonRemove{
     font-size: 22px;
