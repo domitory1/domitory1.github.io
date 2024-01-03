@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="barter/static/css/main.css">
-	<link rel="stylesheet" href="barter/static/libraries/flickity.min.css">
-	<script src="barter/static/libraries/telegram-web-app.js"></script>
-	<script src="barter/static/libraries/jquery.min.js"></script>
-    <title>Коктели</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<title>Меню</title>
+	<link rel="stylesheet" href="static/css/main.css">
+	<link rel="stylesheet" href="static/css/buttons.css">
+	<link rel="stylesheet" href="static/css/popup.css">
+	<link rel="stylesheet" href="static/css/preloader.css">
+	<link rel="stylesheet" href="static/libraries/flickity.min.css">
+	<script src="static/libraries/telegram-web-app.js"></script>
+	<script src="static/libraries/jquery.min.js"></script>
 </head>
 <body>
-    <!--Прелоадер-->
-    <div class="preloader">
+
+	<div class="preloader">
 		<div class="sk-chase">
 		  <div class="sk-chase-dot"></div>
 		  <div class="sk-chase-dot"></div>
@@ -20,128 +23,754 @@
 		  <div class="sk-chase-dot"></div>
 		  <div class="sk-chase-dot"></div>
 		</div>
-	</div>
+	  </div>
 
-    <div id="webapp">
-        <div class="sliderSale">
-            <img src="barter/static/img/Слайдер/photo_1_2023-12-30_15-37-34.jpg">
-            <img src="barter/static/img/Слайдер/photo_2_2023-12-30_15-37-34.jpg">
-            <img src="barter/static/img/Слайдер/photo_3_2023-12-30_15-37-34.jpg">
-            <img src="barter/static/img/Слайдер/photo_4_2023-12-30_15-37-34.jpg">
-            <img src="barter/static/img/Слайдер/photo_5_2023-12-30_15-37-34.jpg">
-            <img src="barter/static/img/Слайдер/photo_6_2023-12-30_15-37-34.jpg">
-        </div>
-        <div class="container">
-            <!--Popup-->
-            <div id="popup-overlay" class="overlay">
+	<div id="webapp">
+		<div class="header">
+			<div class="sliderCategory">
+				<a href="#categoryCell_1" class="categoryName active">🍳 Завтраки</a>
+				<a href="#categoryCell_2" class="categoryName">☕️ Класические напитки</a>
+				<a href="#categoryCell_3" class="categoryName">🍰 Десерты</a>
+				<a href="#categoryCell_4" class="categoryName">🍹 Летнее меню</a>
+				<a href="#categoryCell_5" class="categoryName">🍬 Коробки конфет</a>
+				<a href="#categoryCell_6" class="categoryName">🥐 Выпечка</a>
+				<a href="#categoryCell_7" class="categoryName">🥞 Блинчики</a>
+			</div>
+		</div>
+		<div class="sliderSale">
+			<video loop autoplay muted><source src="static/video/video.mp4" type="video/mp4"></video>
+			<img src="static/img/Блинчики/Блинчики с клубникой и крем чизом.jpeg" alt="Изображение 0">
+			<img src="static/img/Блинчики/Блинчики с красной рыбой.jpeg" alt="Изображение 1">
+			<img src="static/img/Блинчики/Блинчики с томленой грушей.jpeg" alt="Изображение 2">
+		</div>
+
+		<div class="container">
+			
+			<div id="popup-overlay" class="overlay">
                 <div class="cardProduct popup"></div>
             </div>
 
-            <h2>Вкусы</h2>
-            <div id="categoryCell_1" class="categoryElem">
-                <div class="col-6">
-                    <div class="cardProduct" id="0">
-                        <picture><img src="barter/static/img/Коктели/кровавая мери.jpg"></picture>
-                        <h3 id='nameProduct'>Кровавая мери</h3>
-                        <p id="descriptionProduct">1. закинь куб в бокал 
-                            2. добавь 50&nbsp;мл водки и 120&nbsp;мл томатного сока 
-                            3. укрась коктейль лимоном 
-                        </p>
-                        <div class="btnEnable">
-                            <div class="btn-space">
-                                <button class="buttonAddToBasket">Рецепт</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="cardProduct" id="1">
-                        <picture><img src="barter/static/img/Коктели/мохито.jpg"></picture>
-                        <h3 id='nameProduct'>Мохито</h3>
-                        <p id='descriptionProduct'>1. закинь куб в бокал 
-                            2. залей 50&nbsp;мл белого рома и 100&nbsp;мл содовой 
-                            3. укрась коктейль лаймом </p>
-                        <div class="btnEnable">
-                            <div class="btn-space">
-                                <button class="buttonAddToBasket">Рецепт</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="cardProduct" id="2">
-                        <picture><img src="barter/static/img/Коктели/маргарита.jpg"></picture>
-                        <h3 id='nameProduct'>Маргарита</h3>
-                        <p id='descriptionProduct'>1. закинь куб в бокал 
-                            2. добавь 50&nbsp;мл текилы 
-                            3. укрась коктейль лаймом и солью по ободку бокала </p>
-                        <div class="btnEnable">
-                            <div class="btn-space">
-                                <button class="buttonAddToBasket">Рецепт</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="cardProduct" id="3">
-                        <picture><img src="barter/static/img/Коктели/голубая лагуна.jpg"></picture>
-                        <h3 id='nameProduct'>Голубая лагуна</h3>
-                        <p id='descriptionProduct'>1. закинь куб в бокал 
-                            2. добавь 50&nbsp;мл водки и 100&nbsp;мл спрайта 
-                            3. укрась коктейль колечком апельсина </p>
-                        <div class="btnEnable">
-                            <div class="btn-space">
-                                <button class="buttonAddToBasket">Рецепт</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="cardProduct" id="4">
-                        <picture><img src="barter/static/img/Коктели/пина колада.jpg"></picture>
-                        <h3 id='nameProduct'>Пина колада</h3>
-                        <p id='descriptionProduct'>1. закинь куб в бокал 
-                            2. добавь 50&nbsp;мл светлого рома и 50&nbsp;мл ананасового сока 
-                            3. укрась коктейль ананасом</p>
-                        <div class="btnEnable">
-                            <div class="btn-space">
-                                <button class="buttonAddToBasket">Рецепт</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="cardProduct" id="6">
-                        <picture><img src="barter/static/img/Коктели/санрайз.jpg"></picture>
-                        <h3 id='nameProduct'>Санрайз</h3>
-                        <p id='descriptionProduct'>1. закинь куб в бокал 
-                            2. добавь 50&nbsp;мл водки и 100&nbsp;мл апельсинового сока 
-                            3. укрась коктейль долькой апельсина</p>
-                        <div class="btnEnable">
-                            <div class="btn-space">
-                                <button class="buttonAddToBasket">Рецепт</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="cardProduct" id="6">
-                        <picture><img src="barter/static/img/Коктели/космополитен.jpg"></picture>
-                        <h3 id='nameProduct'>Космополитен</h3>
-                        <p id='descriptionProduct'>1. закинь куб в бокал 
-                            2. добавь 40&nbsp;мл водки и 50&nbsp;мл клюквенного сока 
-                            3. укрась коктейль долькой лайма</p>
-                        <div class="btnEnable">
-                            <div class="btn-space">
-                                <button class="buttonAddToBasket">Рецепт</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="barter/static/libraries/flickity.pkgd.min.js"></script>
-	<script src="barter/static/js/main.js"></script>
+			<h2 style="margin-top: 25px;">🍳 Завтраки</h2>
+			<p class="description_category">
+				
+			</p>
+			<div id="categoryCell_1" class="categoryElem">
+				<div class="col-6">
+					<div class="cardProduct" id="0">
+						<picture><img src="static/img/Завтраки/Вафли сырные.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Вафли сырные</h3>
+						<p id='descriptionProduct'>Две вафли с добавлением сыра в тесто, подаются с красной слабосоленой рыбой, зеленым салатом, помидорами черри, мягким творожным сыром, кедровыми орешками и соусом бальзамиком</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">430 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="1">
+						<picture><img src="static/img/Завтраки/Вафли творожные.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Вафли творожные</h3>
+						<p id='descriptionProduct'>Подаются со свежими ягодами и кусочками банана (2 шт.)</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">280 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="2">
+						<picture><img src="static/img/Завтраки/Галета на постном тесте.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Галета на постном тесте</h3>
+						<p id='descriptionProduct'>Постная галета на цельнозерновой муке</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="3">
+						<picture><img src="static/img/Завтраки/Гранола.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Гранола</h3>
+						<p id='descriptionProduct'>Наша домашняя ореховая гранола подается с бананом, топленным с семенами ванили, грушей и свежими ягодами</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="4">
+						<picture><img src="static/img/Завтраки/Каша рисовая с соусом манго-маракуя.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Каша рисовая с соусом манго-маракуя</h3>
+						<p id='descriptionProduct'>Рисовая каша с бананом, семенами чиа, лепестками миндаля и пюре манго-маракуя</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">180 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="5">
+						<picture><img src="static/img/Завтраки/Круассан десертный.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Круассан десертный</h3>
+						<p id='descriptionProduct'>Сливочный круассан, сырный крем, кули</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="6">
+						<picture><img src="static/img/Завтраки/Сырная вафля с яйцом скрембл и лососем.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Сырная вафля с яйцом скрембл и лососем</h3>
+						<p id='descriptionProduct'>Сырная вафля, скрембл, слабосоленый лосось, микс зелени, помидоры черри, сырный крем, бальзамический соус</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">430 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="7">
+						<picture><img src="static/img/Завтраки/Сырная вафля с яйцом скрембл и ростбифом.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Сырная вафля с яйцом скрембл и ростбифом</h3>
+						<p id='descriptionProduct'>Сырная вафля, скрембл, микс зелени, черри, медово-горчичный соус, бальзамический соус</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">380 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="8">
+						<picture><img src="static/img/Завтраки/Сырники.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Сырники</h3>
+						<p id='descriptionProduct'>Воздушные, безглютеновые сырники. Подаются с россыпью свежих ягод и фирменным соусом</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>☕️ Класические напитки</h2>
+			<p class="description_category">
+				
+			</p>
+			<div id="categoryCell_2" class="categoryElem">
+				<div class="col-6">
+					<div class="cardProduct" id="9">
+						<picture><img src="static/img/Класические напитки/Американо.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Американо</h3>
+						<p id='descriptionProduct'>Вода, молоко, эспрессо. Крепкий черный кофе</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">140 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="10">
+						<picture><img src="static/img/Класические напитки/Большой капучино.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Большой капучино</h3>
+						<p id='descriptionProduct'>Кофейно-молочный напиток на двойной порции эспрессо</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">210 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="11">
+						<picture><img src="static/img/Класические напитки/Горячий шоколад.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Горячий шоколад</h3>
+						<p id='descriptionProduct'>Густой ароматный горячий шоколад</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">210 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="12">
+						<picture><img src="static/img/Класические напитки/Какао.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Какао</h3>
+						<p id='descriptionProduct'>Вкусное какао двух видов: сладкий и несладкий</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">120 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="13">
+						<picture><img src="static/img/Класические напитки/Капучино классический.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Капучино классический</h3>
+						<p id='descriptionProduct'>Классический кофейный напиток на основе молока и кофе</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">170 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="14">
+						<picture><img src="static/img/Класические напитки/Латте.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Латте</h3>
+						<p id='descriptionProduct'>Кофейный напиток с большим содержанием молока</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">210 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="15">
+						<picture><img src="static/img/Класические напитки/Латте авторский.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Латте авторский</h3>
+						<p id='descriptionProduct'>Латте с добавлением натуральных ингредиентов</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="16">
+						<picture><img src="static/img/Класические напитки/Матча.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Матча</h3>
+						<p id='descriptionProduct'>Растительный порошковый чай</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">220 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="17">
+						<picture><img src="static/img/Класические напитки/Раф.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Раф</h3>
+						<p id='descriptionProduct'>Нежный кофе на основе сливок с добавлением натуральных ингредиентов</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="18">
+						<picture><img src="static/img/Класические напитки/Флет уайт.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Флет уайт</h3>
+						<p id='descriptionProduct'>Кофейный крепкий напиток с молоком</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">190 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>🍰 Десерты</h2>
+			<p class="description_category">
+				
+			</p>
+			<div id="categoryCell_3" class="categoryElem">
+				<div class="col-6">
+					<div class="cardProduct" id="19">
+						<picture><img src="static/img/Десерты/Ассорти тортов.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Ассорти тортов</h3>
+						<p id='descriptionProduct'>Четыре кусочка с разными начинками: бисквитные, наполеон, павлова, киевский, чизкейк</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">1000 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="20">
+						<picture><img src="static/img/Десерты/Киевский.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Киевский</h3>
+						<p id='descriptionProduct'>Торт безе из двух хрустящих коржей, прослойки из фундука, классического и шоколадного масляного крема</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">240 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="21">
+						<picture><img src="static/img/Десерты/Медовое.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Медовое</h3>
+						<p id='descriptionProduct'>Ароматные медовые коржи, крем на основе карамелизированной сметаны и карамели</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">220 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="22">
+						<picture><img src="static/img/Десерты/Наполеон.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Наполеон</h3>
+						<p id='descriptionProduct'>В составе слоеное тесто и заварной крем на основе белого шоколада. Авторская подача классического десерта</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">240 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="23">
+						<picture><img src="static/img/Десерты/Ореховые шоко батончики.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Ореховые шоко батончики</h3>
+						<p id='descriptionProduct'>В ассортименте</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">120 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="24">
+						<picture><img src="static/img/Десерты/Птичье молоко.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Птичье молоко</h3>
+						<p id='descriptionProduct'>Яичный белок, сгущенное молоко, сливочное масло и агар-агар. Конфета-суфле. Ассорти вкусов. Основа у всех одинаковая, различаются в зависимости от обсыпки: фисташковое, классический (какао), кокос, ягодный (Сублимированные ягоды малины, клубники)</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">40 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="25">
+						<picture><img src="static/img/Десерты/Творожное кольцо.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Творожное кольцо</h3>
+						<p id='descriptionProduct'>Творожное колечко с начинкой сливочная карамель или клубника</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">220 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="26">
+						<picture><img src="static/img/Десерты/Торт порционный.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Торт порционный</h3>
+						<p id='descriptionProduct'>Бисквитный торт с крем-чизом.</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="27">
+						<picture><img src="static/img/Десерты/Трюфели.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Трюфели</h3>
+						<p id='descriptionProduct'>Конфета из белого, темного или молочного шоколада с добавлением сливок, в зависимости от вкуса добавляется фруктовое пюре</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">60 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>🍹 Летнее меню</h2>
+			<p class="description_category">
+				
+			</p>
+			<div id="categoryCell_4" class="categoryElem">
+				<div class="col-6">
+				  	<div class="cardProduct" id="28">
+						<picture><img src="static/img/Летнее меню/Авторские лимонады.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Авторские лимонады</h3>
+						<p id='descriptionProduct'>Сочные вкусные лимонады с необычным сочетанием</p>
+						<div class="btnEnable">
+					  		<div class="btn-space">
+								<button class="buttonAddToBasket">230 ₽</button>
+					  		</div>
+						</div>
+				  	</div>
+				</div>
+				<div class="col-6">
+				  	<div class="cardProduct" id="29">
+						<picture><img src="static/img/Летнее меню/Бамбл.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Бамбл</h3>
+						<p id='descriptionProduct'>Сочетание сока и кофе дает яркий и сочный вкус</p>
+						<div class="btnEnable">
+					 		<div class="btn-space">
+								<button class="buttonAddToBasket">240 ₽</button>
+					  		</div>
+						</div>
+				  	</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="30">
+						<picture><img src="static/img/Летнее меню/Мятный латте.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Мятный латте</h3>
+						<p id='descriptionProduct'>Молочно-кофейный с нежной мятой, легка сладкий</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="31">
+						<picture><img src="static/img/Летнее меню/Раф Кокосовый батончик.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Раф Кокосовый батончик</h3>
+						<p id='descriptionProduct'>На основе сливок и кофе. Волшебный вкус десерта</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">270 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="32">
+						<picture><img src="static/img/Летнее меню/Фраппе карамель.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Фраппе карамель</h3>
+						<p id='descriptionProduct'>Сливочная карамель, кофе, молоко и колотый лед</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="33">
+						<picture><img src="static/img/Летнее меню/Фраппе клубника в белом шоколаде.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Фраппе клубника в белом шоколаде</h3>
+						<p id='descriptionProduct'></p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="34">
+						<picture><img src="static/img/Летнее меню/Холодный латте.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Холодный латте</h3>
+						<p id='descriptionProduct'>Холодная классика на основе молока с добавлением кофе, напиток несладкий</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">210 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="35">
+						<picture><img src="static/img/Летнее меню/Холодный чай.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Холодный чай</h3>
+						<p id='descriptionProduct'>Холодный чай на основе натурального чайного листа</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">220 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="36">
+						<picture><img src="static/img/Летнее меню/Эспрессо тоник.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Эспрессо тоник</h3>
+						<p id='descriptionProduct'>Бодрящий кофейный напиток. На основе тоника и лимона</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">220 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>🍬 Коробки конфет</h2>
+			<p class="description_category">
+				
+			</p>
+			<div id="categoryCell_5" class="categoryElem">
+				<div class="col-6">
+					<div class="cardProduct" id="37">
+						<picture><img src="static/img/Коробки конфет/Ассорти маракун.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Ассорти маракун</h3>
+						<p id='descriptionProduct'>Французское пирожное из двух миндальных крышечек и крема между ними (5шт.)</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">550 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="38">
+						<picture><img src="static/img/Коробки конфет/Ассорти птичье молоко.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Ассорти птичьего молоко</h3>
+						<p id='descriptionProduct'>Ассорти из разных вкусов птичьего молока: клубника, какао, черная смородина, фисташка, манго, кокос, миндаль (32шт.)</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">1300 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="39">
+						<picture><img src="static/img/Коробки конфет/Ассорти птичье молоко(330).jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Ассорти птичьего молоко</h3>
+						<p id='descriptionProduct'>Ассорти из разных вкусов птичьего молока: клубника, какао, черная смородина, фисташка, манго, кокос, миндаль(18шт.)</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">750 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="40">
+						<picture><img src="static/img/Коробки конфет/Ассорти птичье молоко(170).jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Ассорти птичьего молока</h3>
+						<p id='descriptionProduct'>Ассорти из разных вкусов птичьего молока: клубника, какао, черная смородина, фисташка, манго, кокос, миндаль(9шт.)</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">400 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="41">
+						<picture><img src="static/img/Коробки конфет/Ассорти сладостей.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Ассорти сладостей</h3>
+						<p id='descriptionProduct'>Шоколадные батончики (4шт.), кокосовый батончик, трюфели(6шт.), птичье молоко (12шт.)</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">1200 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="42">
+						<picture><img src="static/img/Коробки конфет/Мини-набор птичьего молока.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Мини-набор птичьего молока</h3>
+						<p id='descriptionProduct'>Конфета-суфле из яичного белка, сгущенного молока, агар-агара. Орехи, сублимированные ягоды или фрукты, какао для обсыпки (9шт.). Основа у всех вкусов одинаковая. Набор (10х10 см) упакован с новогодней открыткой</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">400 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="43">
+						<picture><img src="static/img/Коробки конфет/Сет Ассорти из разных мини-пирожных.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Сет Ассорти из разных мини-пирожных</h3>
+						<p id='descriptionProduct'>Медовое с карамелью, лимонный лимон, черная смородина-мак, наполеон, шоколад-фундук карамель, шпинат-клубника, морковь-маракуйя, тирамису (8шт.). Отличный вариант для похода в гости, чаепития с коллегами, презента врачам, учителям, да и просто для вас</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">1000 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="44">
+						<picture><img src="static/img/Коробки конфет/Сет Ассорти из разных пирожных.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Сет Ассорти из разных пирожных</h3>
+						<p id='descriptionProduct'>Сет ассорти из разных пирожных: медовое с карамелью, лимонный лимон, черная смородина-мак, наполеон, шоколад-фундук-карамель, шпинат-клубника, морковь-маракуйя, тирамису (16шт.). Отличный вариант для похода в гости, чаепития, с коллегами, презента врачам, учителям, да и просто для вас</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">2000 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>🥐 Выпечка</h2>
+			<p class="description_category">
+				
+			</p>
+			<div id="categoryCell_6" class="categoryElem">
+				<div class="col-6">
+					<div class="cardProduct" id="45">
+						<picture><img src="static/img/Выпечка/Закусочный круассан с красной рыбой.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Закусочный круассан с красной рыбой</h3>
+						<p id='descriptionProduct'>Сливочный круассан с добавлением сырного крема, красной слабосоленой рыбы, зелени, салата, и свежего огурца</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">380 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="46">
+						<picture><img src="static/img/Выпечка/Закусочный круассан с ростбифом.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Закусочный круссан с ростбифом</h3>
+						<p id='descriptionProduct'>Сливочный круассан с говяжьим ростбифом, солеными огурчиками и горчичным соусом</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">380 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="47">
+						<picture><img src="static/img/Выпечка/Круассан Фисташка.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Круассан Фисташка</h3>
+						<p id='descriptionProduct'>Сливочный круассан собственного производства с фисташковой карамелью внутри и дробленой фисташкой сверху</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="48">
+						<picture><img src="static/img/Выпечка/Круассан миндальный.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Круассан миндальный</h3>
+						<p id='descriptionProduct'>Сливочный круассан собственного приготовления с миндальным кремом внутри и миндальной крошкой сверху</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="49">
+						<picture><img src="static/img/Выпечка/Круассан сливочный.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Круассан сливочный</h3>
+						<p id='descriptionProduct'>Собственного приготовления. Полностью на новозеландском сливочном молоке</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">150 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="50">
+						<picture><img src="static/img/Выпечка/Фундучный круасса.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Фундучный круассан</h3>
+						<p id='descriptionProduct'>Сливочный круассан с фундучным кремом внутри. Сверху сливочная карамель и орешки</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>🥞 Блинчики</h2>
+			<p class="description_category">
+				
+			</p>
+			<div id="categoryCell_7" class="categoryElem">
+				<div class="col-6">
+					<div class="cardProduct" id="51">
+						<picture><img src="static/img/Блинчики/Блинчики с ветчиной, яйцом скрембл и сыром.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Блинчики с ветчиной, яйцом скрембл и сыром</h3>
+						<p id='descriptionProduct'></p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="52">
+						<picture><img src="static/img/Блинчики/Блинчики с клубникой и крем чизом.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Блинчики с клубникой и крем-чизом</h3>
+						<p id='descriptionProduct'>Блинчики с клубникой, крем-чизом, клубничным топпингом и свежими ягодами</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">230 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="53">
+						<picture><img src="static/img/Блинчики/Блинчики с красной рыбой.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Блинчики с красной рыбой</h3>
+						<p id='descriptionProduct'>Блинчики с красной рыбой, закусочным крем-чизом, зеленью и кедровыми орешками</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">250 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="54">
+						<picture><img src="static/img/Блинчики/Блинчики с томленой грушей.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Блинчики с томленой грушей</h3>
+						<p id='descriptionProduct'>Блинчики с крем-чизом, томленой грушей, сгущенкой и грецкими орешками</p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">220 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="cardProduct" id="55">
+						<picture><img src="static/img/Блинчики/Блинчики с фирменной карамелью и бананом.jpeg" alt="изображение"></picture>
+						<h3 id='nameProduct' >Блинчики с фирменной карамелью и бананом</h3>
+						<p id='descriptionProduct'></p>
+						<div class="btnEnable">
+							<div class="btn-space">
+								<button class="buttonAddToBasket">220 ₽</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="static/libraries/flickity.pkgd.min.js"></script>
+	<script src="static/js/main.js"></script>
+	<script src="static/js/request.js"></script>
+	<script src="static/js/popup.js"></script>
+	<script src="static/js/preloader.js"></script>
 </body>
 </html>
