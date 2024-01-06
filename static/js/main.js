@@ -74,7 +74,7 @@ function truncateText(elements) {
 const names = document.querySelectorAll('#nameProduct');
 const descriptions = document.querySelectorAll('#descriptionProduct');
 const originalNames = Array.from(names).map(name => name.textContent);
-const originalDescriptions = Array.from(descriptions).map(description => description.textContent);cd
+const originalDescriptions = Array.from(descriptions).map(description => description.textContent);
 
 truncateText(descriptions);
 truncateText(names);
