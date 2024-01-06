@@ -62,10 +62,10 @@ body{
 	margin-right: 10px;
 	object-fit: cover;
 }
-.container{
+.showcase{
 	padding-left: 10px;
 }
-.container p{
+.showcase p{
 	font-size: 14px;
 	color: var(--tg-theme-hint-color);
 }
